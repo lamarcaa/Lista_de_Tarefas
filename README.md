@@ -2,7 +2,7 @@
 
 <h3> HTML, CSS e JavaScript </h3>
 
-🎈 Demo: https://cutelist.netlify.app
+🎈 Demo: https://cutelist.netlify.app/
 
 
 
