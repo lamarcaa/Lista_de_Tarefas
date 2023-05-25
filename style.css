@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+/* variaveis */
+:root 
+{
+  --amarelho: #ffc13b;
+  --roxo: #8A20B3;
+  --azul: #688ae2;
+  --black: #353535;
+}
+
+/* reset */
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+body 
+{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--azul);
+}
+
+.cabecalho 
+{
+  background-color: var(--amarelho);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  height: 100px;
+}
+
+.cabecalho div 
+{
+  display: inline-flex;
+  gap: 10px;
+}
+
+.cabecalho > img 
+{
+  max-width: 90px;
+}
+
+.main 
+{
+  position: relative;
+  width: 80%;
+  height: 450px;
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.main #txt-padrao 
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.menu-flutuante 
+{
+  position: absolute;
+  left: 15px;
+  bottom: -100%;
+  min-height: 30%;
+  width: 31%;
+  padding: 10px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0.1px 3px 30px 1.5px rgba(0, 0, 0, 0.5);
+  background-color: var(--roxo);
+}
+
+#menu 
+{
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2em;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+#menu p 
+{
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#menu div 
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#menu img 
+{
+  max-width: 20%;
+}
+
+.menu-flutuante_active 
+{
+  bottom: 0%;
+}
+
+#btn-flutuante 
+{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 30px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--amarelho);
+  border-radius: 50%;
+  font-size: 2em;
+  color: #fff;
+  box-shadow: 0.1px 3px 18px 1.5px rgba(0, 0, 0, 0.2);
+}
+
+form 
+{
+  height: 60%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input 
+{
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.btn 
+{
+  width: 100%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn button 
+{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2em;
+  border-radius: 10px;
+  box-shadow: 0.1px 3px 12px 1.5px rgba(0, 0, 0, 0.2);
+}
+
+.btn button:hover 
+{
+  opacity: 70%;
+  transition: all .3s ease-out;
+}
+
+#btn-addtxt 
+{
+  background-color: var(--amarelho);
+}
+
+#btn-limpartxt 
+{
+  background-color: transparent;
+  border: 2px solid var(--amarelho);
+}
+
+#btn-limpartxt i 
+{
+  transform: rotate(45deg);
+}
+
+.container-tarefas
+{
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: repeat(1, 50px);
+  grid-gap: 10px;
+  max-height: 300px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.tarefas 
+{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+  border-bottom-style: dashed;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.tarefas h2, p
+{
+  color: var(--black);
+}
+
+.tarefas h2 
+{
+  display: none;
+}
+
+.tarefas p 
+{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tarefas input[type="checkbox"] 
+{
+  background-color: transparent;
+  height: 25px;
+  width: 25px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid var(--black);
+  border-radius: 4px;
+}
+
+.tarefas input[type="checkbox"]:checked 
+{
+  appearance: checkbox;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 700px) 
+{
+  .main 
+  {
+    height: 90vh;
+  }
+  .container-tarefas 
+  {
+    grid-template-columns: 100%;
+  }
+  .menu-flutuante 
+  {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .container-tarefas
+  {
+    max-height: 500px;
+  }
+}

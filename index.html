@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Lista de Tarefas - Fofas e Organizadas!</title>
+      <link rel="shortcut icon" type="image/x-icon" href="./imgs/sol_icon.ico">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./style.css">
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+   <body>
+      <div class="main">
+         <!-- titulo quando nao tiver nenhuma task -->
+         <h1 id="txt-padrao">Zero tarefas! :)</h1>
+
+         <article class="cabecalho">
+            <div>
+               <h1>Minhas Tarefas:</h1>
+               <!-- contador das tasks -->
+               <h1 id="tarefas-cont">0</h1>
+            </div>
+             
+            <img src="imgs/sol.png" alt="sol">
+         </article>
+
+         <!-- container para exibir as tasks -->
+         <div class="container-tarefas"></div>
+
+         <!-- btn flutuante  -->
+         <button id="btn-flutuante">
+            <i class="bx bx-plus"></i>
+         </button>
+
+         <div class="menu-flutuante">
+            <!-- btn para levantar/descer o form -->
+            <button id="menu">
+               <img src="imgs/gato1.png" alt="">
+
+               <div>
+                  <p>Adicione sua tarefa!</p>
+                  <i class="bx bx-chevron-down"></i>
+               </div>
+
+               <img src="imgs/gato2.png" alt="">
+            </button>
+
+            <!-- form -->
+            <form class="form">
+
+               <input type="text" name="tarefa" placeholder="Tarefa..." autocomplete="off">
+               <div class="btn">
+                  <!-- btn limpar -->
+                  <button id="btn-limpartxt"><i class="bx bx-plus"></i></button>
+                  <!-- btn add -->
+                  <button id="btn-addtxt"><i class="bx bx-plus"></i></button>
+               </div>
+
+            </form>
+
+         </div>
+
+      </div>
+
+      <script src="./main.js"></script>
+
+   
+
+
+</body></html>
